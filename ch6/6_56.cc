@@ -10,7 +10,6 @@ inline int div_func(int a, int b) {return a / b;}
 
 int main()
 {
-	
 	std::vector<pf> v1 = {add_func, sub_func, mul_func, div_func};
 	int m, n;
 
