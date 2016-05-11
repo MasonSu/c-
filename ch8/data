@@ -1,0 +1,5 @@
+This text shows and highlights features and basic principles of C++. It is aimed at experienced C users who wish to learn C++. You will be able to express your code using the richer C++ syntax and you will be able to read some C++ code.
+
+Though the concept is introduced and made usable, this is not a tutorial about Object Oriented Programming. You will still have to learn the spirit of OOP and the details of its implementation in C++, in order to be a true C++ programmer.
+
+If you don't have a C++ compiler at hand, maybe try to use online tools like this one: http://codepad.org
