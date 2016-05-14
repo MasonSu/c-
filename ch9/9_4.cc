@@ -5,12 +5,9 @@ using std::vector;
 
 bool findvalue(vector<int>::iterator start, vector<int>::iterator end, int value)
 {
-	auto c = start;
-	while(c != end){
+	for(auto c = start; c != end; ++c)
 		if(*c == value)
 			return true;
-		++c;
-	}
 	return false;
 }
 

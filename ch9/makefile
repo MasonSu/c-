@@ -9,7 +9,7 @@ CC=g++
 CFLAGS=-g -Wall -std=c++0x
 
 #the build target executable:
-TARGET=9_31
+TARGET=9_15
 
 all: $(TARGET)
 
