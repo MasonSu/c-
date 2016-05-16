@@ -16,9 +16,9 @@ using std::inserter;
 using std::cout;
 using std::endl;
 
-inline void print(const string &s, const list<int> &v)
+inline void print(const string &lable, const list<int> &v)
 {
-	cout << s << ": ";
+	cout << lable << ": ";
 	for(auto c : v)
 		cout << c << " ";
 	cout << endl;

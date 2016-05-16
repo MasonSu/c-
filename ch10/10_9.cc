@@ -35,6 +35,7 @@ int main()
 	for(auto const &c : v1)
 		cout << c << " ";
 	cout << endl;
+	
 	elimDups(v1);
 
 	return 0;
