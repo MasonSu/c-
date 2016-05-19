@@ -1,6 +1,6 @@
 #build an executable named myprog from myprog.c
 #the compioer: gcc for C program, define as g++ for C++
-CC=g++
+CC=clang++
 
 #compiler flags:
 #-g adds debugging information to the exeutable file
@@ -9,11 +9,11 @@ CC=g++
 CFLAGS=-g -Wall -std=c++0x
 
 #the build target executable:
-TARGET=6_56
+TARGET=6_27
 
 all: $(TARGET)
 
-$(TARGET): $(TARGET).cc
+%: %.cc
 	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cc
 
 clean:
