@@ -5,7 +5,7 @@
 int main()
 {
 	std::multimap<std::string, std::string> authors;
-	std::string line, name, works;
+	std::string name, works;
 	while(std::cin >> name >> works)	
 		authors.insert(make_pair(name, works));
 	
