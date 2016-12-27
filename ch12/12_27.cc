@@ -31,12 +31,11 @@ void print(string word, map<string, set<int>> &output, const vector<string> &vec
 	}					
 }
 
-vector<string> process(std::ifstream &input, vector<string> vec)
+void process(std::ifstream &input, vector<string> &vec)
 {
 	string line;
 	while(getline(input, line))
-		vec.push_back(line);
-	return vec;			
+		vec.push_back(line);			
 }
 
 void search(string word, const vector<string> &vec)
@@ -47,8 +46,10 @@ void search(string word, const vector<string> &vec)
 		std::istringstream record(*iter);
 		string element;
 		while(record >> element){
-			if(element == word)
+			if(element == word) {
 				linenum.insert(iter - vec.cbegin() + 1);  //插入单词所在的行号
+        break;
+      }
 		}
 	}
 	result.insert(make_pair(word, linenum));  //将单词和它对应的行号插入到map中
@@ -63,7 +64,7 @@ int main(int argc, char **argv)
 		throw std::runtime_error("Argc must be two!");
 	std::ifstream input(argv[1]);
 	if(input){
-		vec = process(input, vec);    //将输入文本保存起来
+		process(input, vec);    //将输入文本保存起来
 		while(true){
 			cout << "Enter word to look for, or q to quit: ";
 			std::string str;

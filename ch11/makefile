@@ -10,7 +10,7 @@ CFLAGS=-g -Wall -std=c++11
 
 #the build target executable:
 TARGET=11_4 11_7 11_12 11_14 11_20 \
-		11_23 11_31
+		11_23 11_31 main
 
 all: $(TARGET)
 

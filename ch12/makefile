@@ -13,8 +13,8 @@ TARGET=main
 
 all: $(TARGET)
 
-$(TARGET): $(TARGET).cc TextQuery.cc TextQuery.h
-	$(CC) $(CFLAGS) $(TARGET).cc TextQuery.cc -o $(TARGET)
+$(TARGET): $(TARGET).cc TextQuery.cc TextQuery.h QueryResult.cc QueryResult.h
+	$(CC) $(CFLAGS) $(TARGET).cc TextQuery.cc QueryResult.cc -o $(TARGET)
 
 #%: %.cc
 #	$(CC) $(CFLAGS) $< -o $@
