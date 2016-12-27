@@ -1,10 +1,9 @@
 #include <iostream>
 #include <thread>
 #include <functional>
-#include <vector>
 #include <mutex>
 #include <condition_variable>
-//using namespace std::placeholders;
+
 class Application
 {
   std::mutex m_mutex;
@@ -45,14 +44,12 @@ public:
     std::cout << "Do Processing On loaded Data" << std::endl;
   }
 };
+
 int main()
 {
   Application app;
   std::thread thread_1(&Application::mainTask, &app);
   std::thread thread_2(&Application::loadData, &app);
-
-  
-
   thread_2.join();
   thread_1.join();
   return 0;

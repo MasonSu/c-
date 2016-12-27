@@ -9,8 +9,7 @@ CC=clang++
 CFLAGS=-std=c++11 -g -Wall 
 
 #the build target executable:
-TARGET=copy_constructor shared_reset friend_class image_read  \
-					delete new_class lambda
+TARGET=pointer_reference
 
 all: $(TARGET)
 

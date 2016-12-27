@@ -11,7 +11,7 @@ CFLAGS=-std=c++11 -g -Wall
 LIBS=-pthread
 
 #the build target executable:
-TARGET=thread
+TARGET=std_consume
 
 all: $(TARGET)
 
