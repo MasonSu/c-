@@ -8,13 +8,15 @@ CC=clang++
 #-std=c++0x enables ISO C++ 11 standard
 CFLAGS=-std=c++11 -g -Wall 
 
+LIBS=-pthread
+
 #the build target executable:
-TARGET=copy_assign
+TARGET=class
 
 all: $(TARGET)
 
 %: %.cpp
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@ $(LIBS)
 
 clean:
 	$(RM) $(TARGET)
